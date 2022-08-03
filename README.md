@@ -1,4 +1,4 @@
-# API with Lumen PHP Framework
+# API Service with Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
@@ -15,14 +15,7 @@ its contain of some libraries :
 
 
 
-## Lumen JWT Documentation
-
-[Lumen jwt Docs](https://jwt-auth.readthedocs.io/en/docs/quick-start)
-[Lumen jwt Docs](https://jwt-auth.readthedocs.io/en/develop/quick-start)
-
-
-
-## Step to Instalation
+### Step to Instalation
 ```
 > git clone git@github.com:raflesngln/lumen_api.git
 > import DB from docs/db/laravel.sql
@@ -32,7 +25,8 @@ its contain of some libraries :
 
 ```
 
-## Access End Point API
+### Access End Point API
+  
 ```
 > [POST](http://localhost:8000/api2/register)
 > [POST](http://localhost:8000/api2/login)
@@ -44,7 +38,13 @@ its contain of some libraries :
 ```
 
 
-## Contributing
+### Lumen JWT Documentation
+
+-   [Lumen jwt Docs](https://jwt-auth.readthedocs.io/en/docs/quick-start) 
+-   [Lumen jwt Docs](https://jwt-auth.readthedocs.io/en/develop/quick-start)
+
+
+### Contributing
 
 Thank you for considering contributing
 
