@@ -66,7 +66,6 @@ $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
 // register jwt in config/jwt.php,  jwt.php is renaming from file vendor/tymon/jwt-auth/config/config.php
 $app->configure('jwt');
-
 //from config/auth.php
 $app->configure('auth');
 
@@ -113,7 +112,6 @@ $app->routeMiddleware([
 // $app->register(App\Providers\EventServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
-
 
 //mendaftarkan middleware
 $app->routeMiddleware([

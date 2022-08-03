@@ -55,14 +55,16 @@ $router->group(['prefix' => 'api2'], function () use ($router) {
    $router->post('register', 'AuthController@register');
      // Matches "/api/login
     $router->post('login', 'AuthController@login');
+     // Matches "/api/refresh
+     $router->post('refresh', 'AuthController@refresh');
+     $router->post('me', 'AuthController@me');
+     $router->post('logout', 'AuthController@logout');
 
     // Matches "/api/profile
     $router->get('profile', 'UserController@profile');
-
     // Matches "/api/users/1
     //get one user by id
     $router->get('users/{id}', 'UserController@singleUser');
-
     // Matches "/api/users
     $router->get('users', 'UserController@allUsers');
 });

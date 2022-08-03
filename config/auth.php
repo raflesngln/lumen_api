@@ -19,5 +19,12 @@ return [
             // 'model' => \App\Model\Users::class,
             'model' => \App\User::class
         ]
-    ]
+        ],
+        'passwords' => [
+            'users' => [
+                'provider' => 'users',
+                'table' => 'password_resets',
+                'expire' => 60,
+            ],
+        ],
 ];

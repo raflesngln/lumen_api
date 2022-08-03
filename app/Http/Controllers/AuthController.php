@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api', ['except' => ['login']]);
+    }
     /**
      * Store a new user.
      *
@@ -36,7 +40,6 @@ class AuthController extends Controller
             $user->phone = $request->input('phone');
             $plainPassword = $request->input('password');
             $user->password = app('hash')->make($plainPassword);
-
             $user->save();
 
             //return successful response
@@ -63,6 +66,31 @@ class AuthController extends Controller
         }
 
         return $this->respondWithToken($token);
+    }
+    public function me()
+    {
+        return response()->json(auth()->user());
+    }
+    public function logout()
+    {
+        auth()->logout();
+
+        return response()->json(['message' => 'Successfully logged out']);
+    }
+    public function refresh()
+    {
+        // $credentials = $request->only('email', 'password');
+        // if ($token = $this->guard()->attempt($credentials)) {
+        //     return $this->respondWithToken($token);
+        // }
+        // return response()->json(['error' => 'Unauthorized'], 401);
+        // return $this->respondWithToken($this->guard()->refresh());
+        return $this->respondWithToken($this->guard()->refresh());
+    }
+
+    public function guard() {
+        // return Auth::guard('api');
+        return Auth::guard();
     }
 
 }
