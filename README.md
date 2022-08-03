@@ -21,6 +21,7 @@ its contain of some libraries :
 > import DB from docs/db/laravel.sql
 > composer update
 > php artisan key:generate
+> php artisan serve --host=127.0.0.1  OR  php artisan serve --host=0.0.0.0 --port=8000 
 > php -S localhost:8000 -t public
 
 ```
